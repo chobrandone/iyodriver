@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+// import 'package:google_fonts/google_fonts.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -26,21 +28,97 @@ class _SplashScreenState extends State<SplashScreen> {
 //     ));
 //   }
   Widget build(BuildContext context) {
+    double w = MediaQuery.of(context).size.width;
+    double h = MediaQuery.of(context).size.height;
     return Scaffold(
-      body: Stack(
-        children: [
-          Container(
-            decoration: BoxDecoration(
-                color: new Color(0xffF5fceb)
+      body: Container(
+
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(
+              ("assets/images/homescreen.png"),
+
             ),
-          ),
-          Center(
-            child: Container(
+            fit: BoxFit.cover,
+          )
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Container(
               child: Image.asset("assets/images/logowhite.png"),
             ),
-          )
-        ],
-      ),
+            Container(
+              child: Image.asset("assets/images/homecar.png",fit: BoxFit.cover,),
+
+
+            ),
+            SizedBox(height: 50,),
+            Center(
+              child: Container(
+                child: Text(
+                  "Bienvenue chez iyodriver",
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+
+                  ),
+                ),
+
+              ),
+            ),
+            SizedBox(height: 25,),
+            Center(
+              child: Container(
+                  child: Text(
+                    "Faites un tour en quelque clics ",
+                    style: TextStyle(
+                      fontSize: 20,
+
+                      color: Colors.white,
+
+                    ),
+                  ),
+
+              ),
+            ),
+            SizedBox(height: 50,),
+            Container(
+              alignment: Alignment.centerRight,
+              margin: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+
+              child: RaisedButton(
+                onPressed: () {},
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),
+                textColor: new Color(0xffcea110),
+                padding: const EdgeInsets.all(0),
+                child: Container(
+                  alignment: Alignment.center,
+                  height: h*0.03,
+                  width: w,
+
+                  padding: EdgeInsets.all(0),
+                  child: Text(
+                    "COMMENCER",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+
+                    ),
+                  ),
+
+                ),
+
+
+              ),
+            ),
+          ],
+        ),
+        // child: Center(
+        // child: Image.asset("assets/images/homecar.png"),
+        // ),
+      )
     );
   }
 }
