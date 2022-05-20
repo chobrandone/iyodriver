@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:iyodriver/Screens/onboarding_screen.dart';
 // import 'package:google_fonts/google_fonts.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -89,7 +90,10 @@ class _SplashScreenState extends State<SplashScreen> {
               margin: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
 
               child: RaisedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => OnboardingScreen()));
+                },
+
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),
                 textColor: new Color(0xffcea110),
                 padding: const EdgeInsets.all(0),
