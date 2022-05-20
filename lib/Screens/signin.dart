@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iyodriver/Screens/carlisting.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({Key? key}) : super(key: key);
@@ -25,7 +26,7 @@ class _SignInPageState extends State<SignInPage> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(bottomLeft: Radius.circular(90)),
                     color: new Color(0xffF5591F),
-                    gradient: LinearGradient(colors: [(new  Color(0xffCEA110)), new Color(0xff2F2E41),],
+                    gradient: LinearGradient(colors: [(new  Color(0xffCEA110)), new Color(0xff2F2E41).withOpacity(0.9),],
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
                     ),
@@ -231,7 +232,7 @@ class _SignInPageState extends State<SignInPage> {
 
                 GestureDetector(
                   onTap: () {
-                    // Write Click Listener Code Here.
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>CarCategoryPage()));
                   },
                   child:  Container(
                     width: w*0.7,
