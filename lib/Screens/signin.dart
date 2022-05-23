@@ -232,7 +232,7 @@ class _SignInPageState extends State<SignInPage> {
 
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>CarCategoryPage()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>CarDashboard()));
                   },
                   child:  Container(
                     width: w*0.7,
