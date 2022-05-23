@@ -38,11 +38,11 @@ class _LoginPageState extends State<LoginPage> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Container(
-                            margin: EdgeInsets.only(top: 50),
+                            // margin: EdgeInsets.only(top: ),
                             child: Image.asset(
                               "assets/images/logowhite.png",
                               height: 200,
-                              width: 300,
+                              width: 200,
                             ),
                           ),
 
@@ -166,9 +166,9 @@ class _LoginPageState extends State<LoginPage> {
                 ),
 
                 GestureDetector(
-                  onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>SignInPage()));
-                  },
+                  // onTap: () {
+                  //   Navigator.push(context, MaterialPageRoute(builder: (context)=>SignInPage()));
+                  // },
                   child:  Container(
                     width: w*0.7,
                     height: h*0.06,
@@ -238,16 +238,16 @@ class _LoginPageState extends State<LoginPage> {
                     children: [
                       Text("Vous n'avez pas de compte?.   "),
                       GestureDetector(
+                        onTap: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>SignInPage()));
+                        },
                         child: Text(
                           "S'inscrire",
                           style: TextStyle(
                               color: Color(0xffCEA110)
                           ),
                         ),
-                        onTap: () {
-                          // Write Tap Code Here.
 
-                        },
                       )
                     ],
                   ),

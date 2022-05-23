@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iyodriver/Screens/carlisting.dart';
+import 'package:iyodriver/Screens/login.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({Key? key}) : super(key: key);
@@ -37,7 +38,7 @@ class _SignInPageState extends State<SignInPage> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Container(
-                            margin: EdgeInsets.only(top: 50),
+                            // margin: EdgeInsets.only(top: 50),
                             child: Image.asset(
                               "assets/images/logowhite.png",
                               height: 150,
@@ -303,16 +304,16 @@ class _SignInPageState extends State<SignInPage> {
                     children: [
                       Text("Avoir un compte?.    "),
                       GestureDetector(
+                        onTap: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginPage()));
+                        },
                         child: Text(
                           "Connecter Vous",
                           style: TextStyle(
                               color: Color(0xffCEA110)
                           ),
                         ),
-                        onTap: () {
-                          // Write Tap Code Here.
 
-                        },
                       )
                     ],
                   ),
