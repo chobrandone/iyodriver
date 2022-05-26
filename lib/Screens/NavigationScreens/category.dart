@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:iyodriver/Screens/NavigationScreens/booking.dart';
 
 class CarCategoryPage extends StatefulWidget {
   const CarCategoryPage({Key? key}) : super(key: key);
@@ -103,7 +104,7 @@ class _CarCategoryPageState extends State<CarCategoryPage> {
                     children: [
                       Container(
 
-                        margin: EdgeInsets.only(left: 10,top: 12),
+                        margin: EdgeInsets.only(left: 10,top: 9),
                         alignment: Alignment.bottomRight,
                         child:  Text(
 
@@ -217,7 +218,7 @@ class _CarCategoryPageState extends State<CarCategoryPage> {
                     children: [
                       Container(
 
-                        margin: EdgeInsets.only(left: 10,top: 12),
+                        margin: EdgeInsets.only(left: 10,top: 9),
                         alignment: Alignment.bottomRight,
                         child:  Text(
 
@@ -332,7 +333,7 @@ class _CarCategoryPageState extends State<CarCategoryPage> {
                     children: [
                       Container(
 
-                        margin: EdgeInsets.only(left: 10,top: 12),
+                        margin: EdgeInsets.only(left: 10,top: 9),
                         alignment: Alignment.bottomRight,
                         child:  Text(
 
@@ -446,7 +447,7 @@ class _CarCategoryPageState extends State<CarCategoryPage> {
                     children: [
                       Container(
 
-                        margin: EdgeInsets.only(left: 10,top: 12),
+                        margin: EdgeInsets.only(left: 10,top: 9),
                         alignment: Alignment.bottomRight,
                         child:  Text(
 
@@ -560,7 +561,7 @@ class _CarCategoryPageState extends State<CarCategoryPage> {
                     children: [
                       Container(
 
-                        margin: EdgeInsets.only(left: 10,top: 12),
+                        margin: EdgeInsets.only(left: 10,top: 9),
                         alignment: Alignment.bottomRight,
                         child:  Text(
 
@@ -585,23 +586,34 @@ class _CarCategoryPageState extends State<CarCategoryPage> {
                           ),
                         ),
                       ),
-                      Container(
-                        alignment: Alignment.bottomRight,
-                        margin: EdgeInsets.only(top: 25,left: 35),
-                        height: h*0.05,
-                        width: w*0.35,
-                        decoration: BoxDecoration(
-                            color: Color(0xffCEA110),
-                            borderRadius: BorderRadius.only(bottomRight:  Radius.circular(30),topLeft: Radius.circular(30)),
-                            border: Border.all(width: 3,color: Color(0xffCEA110),style: BorderStyle.solid)
-                        ),
-                        child: Center(child: Text(" Réservez",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20
-                          ),
-                        )),
-                      ),
+                     GestureDetector(
+                       onTap: () {
+                         Navigator.push(context, MaterialPageRoute(builder: (context)=>BookingPage()));
+                       },
+                       child:  Container(
+
+                         alignment: Alignment.bottomRight,
+                         margin: EdgeInsets.only(top: 25,left: 35),
+                         height: h*0.05,
+                         width: w*0.35,
+                         decoration: BoxDecoration(
+                             color: Color(0xffCEA110),
+                             borderRadius: BorderRadius.only(bottomRight:  Radius.circular(30),topLeft: Radius.circular(30)),
+                             border: Border.all(width: 3,color: Color(0xffCEA110),style: BorderStyle.solid)
+                         ),
+                         child: Center(child: Text(" Réservez",
+
+                           style: TextStyle(
+                               color: Colors.white,
+                               fontSize: 20
+                           ),
+
+                         ),
+
+                         ),
+
+                       ),
+                     )
                     ],
                   )
 
