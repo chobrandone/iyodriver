@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:iyodriver/Screens/NavigationScreens/category.dart';
 
+import '../carlisting.dart';
+
 class BookingPage extends StatefulWidget {
   const BookingPage({Key? key}) : super(key: key);
 
@@ -14,6 +16,7 @@ class _BookingPageState extends State<BookingPage> {
 
   // Initial Selected Value
   String dropdownvalue = 'Item 1';
+  String dropdownpayment = 'Comment vous voulez payer';
 
   // List of items in our dropdown menu
   var items = [
@@ -27,9 +30,18 @@ class _BookingPageState extends State<BookingPage> {
     'Comment vous voulez payer',
     'Cash',
     'Mobile Money'
-  ],
+  ];
+
+    TextEditingController _date = TextEditingController();
+  
+  //SHOW THE DATE PICKER METHOD
+  void _showDatePicker(){
+    showDatePicker(context: context, initialDate: DateTime.now(), firstDate: DateTime(2022), lastDate: DateTime(2025));
+  }
+  final String _url= 'https://youtube.com';
   @override
   Widget build(BuildContext context) {
+    final _dateController = TextEditingController();
 
     double w = MediaQuery.of(context).size.width;
     double h = MediaQuery.of(context).size.height;
@@ -38,12 +50,19 @@ class _BookingPageState extends State<BookingPage> {
             child: Column(
               children: [
               Container(
+
                 padding: EdgeInsets.only(top: 20,left: 20,right: 20),
                 child: Row(
                   children: [
-                    Icon(Icons.arrow_back,
-                      size: 20,
-                      color: Colors.orange,),
+                 GestureDetector(
+                   onTap: () {
+                     Navigator.push(context, MaterialPageRoute(builder: (context)=>CarCategoryPage()));
+                   },
+                   child:  Icon(Icons.arrow_back,
+
+                     size: 20,
+                     color: Colors.orange,),
+                 ),
                     Expanded(child:  Container()),
                     Icon(Icons.person,
                       size: 20,
@@ -188,6 +207,7 @@ class _BookingPageState extends State<BookingPage> {
 
                   children: [
                     Container(
+
                       width: w*0.4,
                       height: h*0.065,
                       margin: const EdgeInsets.only(left: 30,top: 30),
@@ -205,26 +225,36 @@ class _BookingPageState extends State<BookingPage> {
 
                       ),
                       child: TextField(
-                        decoration: InputDecoration(
-                            hintText: "Mot de passe",
-                            prefixIcon: Icon(Icons.password_outlined,color: Color(0xffCEA110),),
-                            focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(30),
-                                borderSide: BorderSide(
-                                    color: Colors.white
-                                )
-                            ),
-                            enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(30),
-                                borderSide: BorderSide(
-                                    color: Colors.white
-                                )
-                            ),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(30)
-                            )
-                        ),
+                        controller: _date,
+                  onTap: _showDatePicker,
+                  // controller: _dateController,
+                  // readOnly: true,
+
+                  decoration: InputDecoration(
+                      hintText: "Date",
+
+                      prefixIcon: Icon(Icons.calendar_today_rounded,color: Color(0xffCEA110),),
+                      focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30),
+                          borderSide: BorderSide(
+                              color: Colors.white
+                          )
                       ),
+                      enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30),
+                          borderSide: BorderSide(
+                              color: Colors.white
+                          )
+                      ),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30)
+                      )
+                  ),
+
+
+
+                ),
+
                     ),
                     Expanded(child:  Container()),
                     Container(
@@ -246,8 +276,8 @@ class _BookingPageState extends State<BookingPage> {
                       ),
                       child: TextField(
                         decoration: InputDecoration(
-                            hintText: "Mot de passe",
-                            prefixIcon: Icon(Icons.password_outlined,color: Color(0xffCEA110),),
+                            hintText: "Heure",
+                            prefixIcon: Icon(Icons.event,color: Color(0xffCEA110),),
                             focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(30),
                                 borderSide: BorderSide(
@@ -363,7 +393,7 @@ class _BookingPageState extends State<BookingPage> {
                   children: [
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>CarCategoryPage()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>CarDashboard()));
                       },
                       child:  Container(
                         width: w*0.5,
@@ -402,13 +432,19 @@ class _BookingPageState extends State<BookingPage> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>CarCategoryPage()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>CarDashboard()));
                       },
                       child:  Container(
+
                         // width: w*0.5,
                         height: h*0.06,
                         margin: EdgeInsets.only(right: 40),
-                      child: Image.asset("assets/images/calls.png"),
+                      child: GestureDetector(
+                        onTap: () async {
+
+                        },
+                        child: Image.asset("assets/images/calls.png"),
+                      )
 
                       ),
                     ),

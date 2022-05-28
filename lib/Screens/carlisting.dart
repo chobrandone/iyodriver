@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:iyodriver/Screens/NavigationScreens/availablecars.dart';
+import 'package:iyodriver/Screens/NavigationScreens/booking.dart';
+import 'package:iyodriver/Screens/navbar_key.dart';
+import 'package:iyodriver/Screens/NavigationScreens/category.dart';
+
+import 'NavigationScreens/profile.dart';
 
 class CarDashboard extends StatefulWidget {
   const CarDashboard({Key? key}) : super(key: key);
@@ -9,32 +15,41 @@ class CarDashboard extends StatefulWidget {
 }
 
 class _CarDashboardState extends State<CarDashboard> {
-  GlobalKey _NavKey = GlobalKey();
+  // GlobalKey _NavKey = GlobalKey();
 
-  var PagesAll=[];
-  var myindex=0;
-
+    int selectedIndex=0;
+    final screen =[ ProfilePage(), BookingPage(), CarCategoryPage()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: CurvedNavigationBar(
+
+        index: selectedIndex,
+        // key: NavBarKey.getKey(),
         backgroundColor: Colors.transparent,
-        key: _NavKey,
+        // key: _NavKey,
+
         items: [
-          Icon((myindex == 0) ? Icons.home_outlined : Icons.home),
-          Icon((myindex == 1) ? Icons.message : Icons.message_outlined),
-          Icon((myindex == 2) ? Icons.favorite_border : Icons.favorite),
-          Icon((myindex == 3) ? Icons.perm_identity : Icons.perm_contact_cal_rounded)
+          Icon( Icons.dashboard ,size: 30,),
+          Icon( Icons.home_outlined ,size: 30,),
+          Icon( Icons.home_outlined ,size: 30,),
+
         ],
-        buttonBackgroundColor: Colors.white,
+        buttonBackgroundColor: Colors.orangeAccent,
         onTap: (index){
           setState(() {
-            myindex = index;
+            selectedIndex =index;
           });
         },
-        animationCurve: Curves.fastLinearToSlowEaseIn, color: Colors.orange,
+        animationCurve: Curves.fastLinearToSlowEaseIn, color: Colors.orangeAccent,
       ),
-      body: PagesAll[myindex],
+        body : screen[selectedIndex]
     );
+
+
   }
+
+
+
 }
+
