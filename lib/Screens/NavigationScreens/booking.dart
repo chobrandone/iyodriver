@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:iyodriver/Screens/NavigationScreens/category.dart';
+import 'package:iyodriver/Screens/NavigationScreens/profile.dart';
 
 import '../carlisting.dart';
 
@@ -56,7 +57,7 @@ class _BookingPageState extends State<BookingPage> {
                   children: [
                  GestureDetector(
                    onTap: () {
-                     Navigator.push(context, MaterialPageRoute(builder: (context)=>CarCategoryPage()));
+                     Navigator.push(context, MaterialPageRoute(builder: (context)=>CarDashboard()));
                    },
                    child:  Icon(Icons.arrow_back,
 
@@ -64,9 +65,15 @@ class _BookingPageState extends State<BookingPage> {
                      color: Colors.orange,),
                  ),
                     Expanded(child:  Container()),
-                    Icon(Icons.person,
-                      size: 20,
-                      color: Colors.orange,),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>ProfilePage()));
+                      },
+                      child:  Icon(Icons.person,
+
+                        size: 20,
+                        color: Colors.orange,),
+                    ),
 
                   ],
                 ),

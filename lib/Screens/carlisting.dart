@@ -18,7 +18,7 @@ class _CarDashboardState extends State<CarDashboard> {
   // GlobalKey _NavKey = GlobalKey();
 
     int selectedIndex=0;
-    final screen =[ ProfilePage(), BookingPage(), CarCategoryPage()];
+    final screen =[ CarCategoryPage(), BookingPage(), ProfilePage(),];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,18 +30,18 @@ class _CarDashboardState extends State<CarDashboard> {
         // key: _NavKey,
 
         items: [
-          Icon( Icons.dashboard ,size: 30,),
-          Icon( Icons.home_outlined ,size: 30,),
-          Icon( Icons.home_outlined ,size: 30,),
+          Icon( Icons.dashboard ,size: 30, color: Colors.white,),
+          Icon( Icons.home_outlined ,size: 30,  color: Colors.white,),
+          Icon( Icons.perm_identity_rounded ,size: 30,  color: Colors.white,),
 
         ],
-        buttonBackgroundColor: Colors.orangeAccent,
+        buttonBackgroundColor: Color(0xffCEA110),
         onTap: (index){
           setState(() {
             selectedIndex =index;
           });
         },
-        animationCurve: Curves.fastLinearToSlowEaseIn, color: Colors.orangeAccent,
+        animationCurve: Curves.fastLinearToSlowEaseIn, color:Color(0xffCEA110)
       ),
         body : screen[selectedIndex]
     );
