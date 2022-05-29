@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:iyodriver/Screens/NavigationScreens/category.dart';
+import 'package:iyodriver/Screens/carlisting.dart';
 import 'package:iyodriver/Screens/login.dart';
 
 class SignInPage extends StatefulWidget {
@@ -233,7 +233,7 @@ class _SignInPageState extends State<SignInPage> {
 
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>CarCategoryPage()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> CarDashboard()));
                   },
                   child:  Container(
                     width: w*0.7,

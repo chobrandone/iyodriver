@@ -376,7 +376,7 @@ class _CarCategoryPageState extends State<CarCategoryPage> {
                         child:  Container(
 
                           alignment: Alignment.bottomRight,
-                          margin: EdgeInsets.only(top: 25,left: 35),
+                          margin: EdgeInsets.only(top: 25,left: 52),
                           height: h*0.05,
                           width: w*0.35,
                           decoration: BoxDecoration(
