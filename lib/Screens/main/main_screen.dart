@@ -32,6 +32,7 @@ class _MainScreenState extends State<MainScreen> {
 
     return Scaffold(
       body: SafeArea(
+
           child: IndexedStack(
         index: _currentIndex,
         children: pages,
@@ -41,8 +42,8 @@ class _MainScreenState extends State<MainScreen> {
         index: _currentIndex,
         items: const [
           Icon(Icons.dashboard, size: 30, color: Colors.white),
-          Icon(Icons.home_outlined, size: 30, color: Colors.white),
-          Icon(Icons.perm_identity_rounded, size: 30, color: Colors.white)
+          Icon(Icons.perm_identity_rounded, size: 30, color: Colors.white),
+          Icon(Icons. phone_in_talk_rounded, size: 30, color: Colors.white)
         ],
         backgroundColor: Colors.transparent,
         buttonBackgroundColor: HexColor('#CEA110'),

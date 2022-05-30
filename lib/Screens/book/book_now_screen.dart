@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iyodriver/Screens/cars/available_cars_screen.dart';
+import 'package:iyodriver/Screens/screens.dart';
 
 class BookNowScreen extends StatefulWidget {
   static const routeName = '/book-now';
@@ -12,17 +13,17 @@ class BookNowScreen extends StatefulWidget {
 
 class _BookNowScreenState extends State<BookNowScreen> {
   // Initial Selected Value
-  String dropdownvalue = 'Item 1';
+  String dropdownvalue = 'Choisissez une voiture';
 
   // List of items in our dropdown menu
   var items = [
-    'Item 1',
+    'Choisissez une voiture',
     'Item 2',
     'Item 3',
     'Item 4',
     'Item 5',
   ];
-  var payments = ['Comment vous voulez payer', 'Cash', 'Mobile Money'];
+  // var payments = ['Comment vous voulez payer', 'Cash', 'Mobile Money'];
 
   @override
   Widget build(BuildContext context) {
@@ -36,17 +37,27 @@ class _BookNowScreenState extends State<BookNowScreen> {
           padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
           child: Row(
             children: [
-              const Icon(
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, AvailableCarsScreen.routeName);
+              },
+              child:   const Icon(
                 Icons.arrow_back,
                 size: 20,
-                color: Colors.orange,
+                color: Color(0xffCEA110),
               ),
+            ),
               Expanded(child: Container()),
-              const Icon(
-                Icons.person,
-                size: 20,
-                color: Colors.orange,
-              ),
+             GestureDetector(
+               onTap: () {
+                 Navigator.pushNamed(context, AvailableCarsScreen.routeName);
+               },
+               child:  const Icon(
+                 Icons.person,
+                 size: 20,
+                 color: Color(0xffCEA110),
+               ),
+             )
             ],
           ),
         ),
@@ -136,9 +147,9 @@ class _BookNowScreenState extends State<BookNowScreen> {
               ]),
               child: TextField(
                 decoration: InputDecoration(
-                    hintText: "Mot de passe",
+                    hintText: "date",
                     prefixIcon: const Icon(
-                      Icons.password_outlined,
+                      Icons.event,
                       color: Color(0xffCEA110),
                     ),
                     focusedBorder: OutlineInputBorder(
@@ -159,9 +170,9 @@ class _BookNowScreenState extends State<BookNowScreen> {
               ]),
               child: TextField(
                 decoration: InputDecoration(
-                    hintText: "Mot de passe",
+                    hintText: "heure",
                     prefixIcon: const Icon(
-                      Icons.password_outlined,
+                      Icons.timer,
                       color: const Color(0xffCEA110),
                     ),
                     focusedBorder: OutlineInputBorder(
@@ -210,43 +221,43 @@ class _BookNowScreenState extends State<BookNowScreen> {
             // Initial Value
           ),
         ),
-        Container(
-          width: w * 0.85,
-          height: h * 0.065,
-          margin: const EdgeInsets.only(left: 20, right: 20, top: 30),
-          padding: const EdgeInsets.only(left: 30, right: 30),
-          decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(30), boxShadow: [
-            BoxShadow(blurRadius: 10, spreadRadius: 7, offset: const Offset(1, 1), color: Colors.grey.withOpacity(0.2))
-          ]),
-          child: DropdownButtonHideUnderline(
-            child: DropdownButton(
-              value: dropdownvalue,
-
-              // Down Arrow Icon
-              icon: const Icon(
-                Icons.keyboard_arrow_down,
-                size: 30,
-              ),
-
-              // Array list of items
-              items: items.map((String items) {
-                return DropdownMenuItem(
-                  value: items,
-                  child: Text(items),
-                );
-              }).toList(),
-              // After selecting the desired option,it will
-              // change button value to selected value
-              onChanged: (String? newValue) {
-                setState(() {
-                  dropdownvalue = newValue!;
-                });
-              },
-            ),
-
-            // Initial Value
-          ),
-        ),
+        // Container(
+        //   width: w * 0.85,
+        //   height: h * 0.065,
+        //   margin: const EdgeInsets.only(left: 20, right: 20, top: 30),
+        //   padding: const EdgeInsets.only(left: 30, right: 30),
+        //   decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(30), boxShadow: [
+        //     BoxShadow(blurRadius: 10, spreadRadius: 7, offset: const Offset(1, 1), color: Colors.grey.withOpacity(0.2))
+        //   ]),
+        //   child: DropdownButtonHideUnderline(
+        //     child: DropdownButton(
+        //       value: dropdownvalue,
+        //
+        //       // Down Arrow Icon
+        //       icon: const Icon(
+        //         Icons.keyboard_arrow_down,
+        //         size: 30,
+        //       ),
+        //
+        //       // Array list of items
+        //       items: items.map((String items) {
+        //         return DropdownMenuItem(
+        //           value: items,
+        //           child: Text(items),
+        //         );
+        //       }).toList(),
+        //       // After selecting the desired option,it will
+        //       // change button value to selected value
+        //       onChanged: (String? newValue) {
+        //         setState(() {
+        //           dropdownvalue = newValue!;
+        //         });
+        //       },
+        //     ),
+        //
+        //     // Initial Value
+        //   ),
+        // ),
         const SizedBox(
           height: 50,
         ),
