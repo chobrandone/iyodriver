@@ -19,12 +19,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Scaffold(
       body: Column(
         children: [
+          SizedBox(height: 30,),
           Container(
             alignment: Alignment.topLeft,
             margin: const EdgeInsets.only(top: 30, left: 30),
             child: GestureDetector(
               onTap: () {
-                // Navigator.pushNamed(context, AvailableCarsScreen.routeName);
+                Navigator.pushNamed(context, AvailableCarsScreen.routeName);
               },
               child: const Icon(
                 Icons.arrow_back,

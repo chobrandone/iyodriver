@@ -160,7 +160,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
         ),
         GestureDetector(
           onTap: () {
-            Navigator.pushNamed(context, MainScreen.routeName);
+            Navigator.pushNamed(context, AvailableCarsScreen.routeName);
           },
           child: Container(
             width: w * 0.7,

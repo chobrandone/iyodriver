@@ -13,11 +13,11 @@ class BookNowScreen extends StatefulWidget {
 
 class _BookNowScreenState extends State<BookNowScreen> {
   // Initial Selected Value
-  String dropdownvalue = 'Choisissez une voiture';
+  String dropdownvalue = 'Comment vous vouler payer';
 
   // List of items in our dropdown menu
   var items = [
-    'Choisissez une voiture',
+    'Comment vous vouler payer',
     'Item 2',
     'Item 3',
     'Item 4',
@@ -33,10 +33,13 @@ class _BookNowScreenState extends State<BookNowScreen> {
         body: SingleChildScrollView(
             child: Column(
       children: [
+
+        SizedBox(height: 50,),
         Container(
           padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
           child: Row(
             children: [
+
             GestureDetector(
               onTap: () {
                 Navigator.pushNamed(context, AvailableCarsScreen.routeName);
@@ -50,7 +53,7 @@ class _BookNowScreenState extends State<BookNowScreen> {
               Expanded(child: Container()),
              GestureDetector(
                onTap: () {
-                 Navigator.pushNamed(context, AvailableCarsScreen.routeName);
+                 Navigator.pushNamed(context, ProfileScreen.routeName);
                },
                child:  const Icon(
                  Icons.person,
@@ -126,6 +129,27 @@ class _BookNowScreenState extends State<BookNowScreen> {
                 hintText: "Numéro de téléphone",
                 prefixIcon: const Icon(
                   Icons.phone_android_outlined,
+                  color: Color(0xffCEA110),
+                ),
+                focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(30), borderSide: const BorderSide(color: Colors.white)),
+                enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(30), borderSide: const BorderSide(color: Colors.white)),
+                border: OutlineInputBorder(borderRadius: BorderRadius.circular(30))),
+          ),
+        ),
+        Container(
+          width: w * 0.85,
+          height: h * 0.065,
+          margin: const EdgeInsets.only(left: 20, right: 20, top: 30),
+          decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(30), boxShadow: [
+            BoxShadow(blurRadius: 10, spreadRadius: 7, offset: const Offset(1, 1), color: Colors.grey.withOpacity(0.2))
+          ]),
+          child: TextField(
+            decoration: InputDecoration(
+                hintText: "Mesedez",
+                prefixIcon: const Icon(
+                  Icons.car_rental,
                   color: Color(0xffCEA110),
                 ),
                 focusedBorder: OutlineInputBorder(

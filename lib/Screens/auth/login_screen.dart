@@ -132,7 +132,7 @@ class _LoginScreenState extends State<LoginScreen> {
         ),
         GestureDetector(
           onTap: () {
-            Navigator.pushNamed(context, MainScreen.routeName);
+            Navigator.pushNamed(context, AvailableCarsScreen.routeName);
           },
           child: Container(
             width: w * 0.7,
