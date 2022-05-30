@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iyodriver/Screens/main/main_screen.dart';
 import 'package:iyodriver/Screens/welcome/onboarding/onboarding_screen.dart';
 import 'package:iyodriver/utils/hex_color.dart';
 // import 'package:google_fonts/google_fonts.dart';
@@ -80,31 +81,47 @@ class _SplashScreenState extends State<SplashScreen> {
           const SizedBox(
             height: 50,
           ),
+
           Container(
-            alignment: Alignment.centerRight,
-            margin: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
-            child: RaisedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, OnboardingScreen.routeName);
-              },
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(80.0)),
-              textColor: HexColor('#CEA110'),
-              padding: const EdgeInsets.all(0),
-              child: Container(
-                alignment: Alignment.center,
-                height: h * 0.03,
-                width: w,
-                padding: const EdgeInsets.all(0),
-                child: const Text(
-                  "COMMENCER",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                  ),
+            margin: EdgeInsets.only(left: 40,right: 40),
+            width: w*0.5,
+                height: h * 0.06,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                  color: Colors.white,
                 ),
+            child: GestureDetector(
+              onTap: () {
+          Navigator.pushNamed(context, OnboardingScreen.routeName);
+        },
+              child: Center(
+                child: Text(
+                          "COMMENCER",
+                          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Color(0xffCEA110)),
+                        ),
               ),
             ),
-          ),
+          )// GestureDetector(
+          //
+          //   onTap: () {
+          //     Navigator.pushNamed(context, OnboardingScreen.routeName);
+          //   },
+          //   child: Container(
+          //     width: w * 0.2,
+          //     height: h * 0.06,
+          //     decoration: BoxDecoration(
+          //         borderRadius: BorderRadius.circular(10),
+          //       color: Colors.orangeAccent,
+          //     ),
+          //     child: Center(
+          //       child: Text(
+          //         "COMMENCER",
+          //         style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.white),
+          //       ),
+          //     ),
+          //   ),
+          // ),
+
         ],
       ),
       // child: Center(
