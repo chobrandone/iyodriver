@@ -37,8 +37,8 @@ class _AvailableCarsScreenState extends State<AvailableCarsScreen> {
               height: 30,
             ),
             Container(
-              width: w * 0.85,
-              height: h * 0.15,
+              // width: w * 0.85,
+              // height: h * 0.15,
               margin: const EdgeInsets.only(left: 20, right: 20),
               decoration: BoxDecoration(
                   color: const Color(0xffFFF9EE),
@@ -52,41 +52,41 @@ class _AvailableCarsScreenState extends State<AvailableCarsScreen> {
                   ]),
               child: Row(
                 children: [
-                  Column(
-                    children: [
-                      Transform.scale(
-                        scale: 1.2,
-                        child: Container(
-                            padding: const EdgeInsets.only(left: 20),
-                            // color: const Color(0xFFE8581C),
-                            child: Image.asset("assets/images/toyota1.png")),
-                      ),
-                      // Container(
-                      //
-                      //   child: Image.asset("assets/images/toyota.png",
-                      //
-                      //     width: w*0.3,
-                      //     height: h*0.095,),
-                      // ),
-                      const SizedBox(
-                        height: 25,
-                      ),
-                      Container(
-                          margin: const EdgeInsets.only(left: 20),
-                          child: RichText(
-                            text: TextSpan(
-                                text: "35,000FCA",
-                                style: const TextStyle(fontSize: 15, color: Color(0xff2F2E41)),
-                                children: [
-                                  TextSpan(
-                                    text: "/JOUR",
-                                    style:
-                                        TextStyle(fontSize: 15, color: Colors.grey[500], fontWeight: FontWeight.bold),
-                                  ),
-                                ]),
-                          ))
-                    ],
-                  ),
+                Expanded(child:   Column(
+                  children: [
+                    Transform.scale(
+                      scale: 1.2,
+                      child: Container(
+                          padding: const EdgeInsets.only(left: 20),
+                          // color: const Color(0xFFE8581C),
+                          child: Image.asset("assets/images/toyota1.png")),
+                    ),
+                    // Container(
+                    //
+                    //   child: Image.asset("assets/images/toyota.png",
+                    //
+                    //     width: w*0.3,
+                    //     height: h*0.095,),
+                    // ),
+                    const SizedBox(
+                      height: 25,
+                    ),
+                    Container(
+                        margin: const EdgeInsets.only(left: 20),
+                        child: RichText(
+                          text: TextSpan(
+                              text: "35,000FCA",
+                              style: const TextStyle(fontSize: 15, color: Color(0xff2F2E41)),
+                              children: [
+                                TextSpan(
+                                  text: "/JOUR",
+                                  style:
+                                  TextStyle(fontSize: 15, color: Colors.grey[500], fontWeight: FontWeight.bold),
+                                ),
+                              ]),
+                        ))
+                  ],
+                ),),
                   Column(
                     children: [
                       Container(
@@ -95,7 +95,7 @@ class _AvailableCarsScreenState extends State<AvailableCarsScreen> {
                         child: const Text(
                           "TOYOTA VITZ",
                           textAlign: TextAlign.right,
-                          style: TextStyle(color: Color(0xff2F2E41), fontWeight: FontWeight.bold, fontSize: 18),
+                          style: TextStyle(color: Color(0xff2F2E41), fontWeight: FontWeight.bold, fontSize: 15),
                         ),
                       ),
                       Container(
@@ -139,8 +139,8 @@ class _AvailableCarsScreenState extends State<AvailableCarsScreen> {
               height: 30,
             ),
             Container(
-              width: w * 0.85,
-              height: h * 0.15,
+              // width: w * 0.85,
+              // height: h * 0.15,
               margin: const EdgeInsets.only(left: 20, right: 20),
               decoration: BoxDecoration(
                   color: const Color(0xffFFF9EE),
@@ -154,41 +154,41 @@ class _AvailableCarsScreenState extends State<AvailableCarsScreen> {
                   ]),
               child: Row(
                 children: [
-                  Column(
-                    children: [
-                      Transform.scale(
-                        scale: 1.2,
-                        child: Container(
-                            padding: const EdgeInsets.only(left: 20),
-                            // color: const Color(0xFFE8581C),
-                            child: Image.asset("assets/images/toyota.png")),
-                      ),
-                      // Container(
-                      //
-                      //   child: Image.asset("assets/images/toyota.png",
-                      //
-                      //     width: w*0.3,
-                      //     height: h*0.095,),
-                      // ),
-                      const SizedBox(
-                        height: 25,
-                      ),
-                      Container(
-                          margin: const EdgeInsets.only(left: 20),
-                          child: RichText(
-                            text: TextSpan(
-                                text: "35,000FCA",
-                                style: const TextStyle(fontSize: 15, color: Color(0xff2F2E41)),
-                                children: [
-                                  TextSpan(
-                                    text: "/JOUR",
-                                    style:
-                                        TextStyle(fontSize: 15, color: Colors.grey[500], fontWeight: FontWeight.bold),
-                                  ),
-                                ]),
-                          ))
-                    ],
-                  ),
+                 Expanded(child:  Column(
+                   children: [
+                     Transform.scale(
+                       scale: 1.2,
+                       child: Container(
+                           padding: const EdgeInsets.only(left: 20),
+                           // color: const Color(0xFFE8581C),
+                           child: Image.asset("assets/images/toyota.png")),
+                     ),
+                     // Container(
+                     //
+                     //   child: Image.asset("assets/images/toyota.png",
+                     //
+                     //     width: w*0.3,
+                     //     height: h*0.095,),
+                     // ),
+                     const SizedBox(
+                       height: 25,
+                     ),
+                     Container(
+                         margin: const EdgeInsets.only(left: 20),
+                         child: RichText(
+                           text: TextSpan(
+                               text: "35,000FCA",
+                               style: const TextStyle(fontSize: 15, color: Color(0xff2F2E41)),
+                               children: [
+                                 TextSpan(
+                                   text: "/JOUR",
+                                   style:
+                                   TextStyle(fontSize: 15, color: Colors.grey[500], fontWeight: FontWeight.bold),
+                                 ),
+                               ]),
+                         ))
+                   ],
+                 ),),
                   Column(
                     children: [
                       Container(
@@ -197,7 +197,7 @@ class _AvailableCarsScreenState extends State<AvailableCarsScreen> {
                         child: const Text(
                         "TOYOTA VITZ",
                           textAlign: TextAlign.right,
-                          style: TextStyle(color: Color(0xff2F2E41), fontWeight: FontWeight.bold, fontSize: 18),
+                          style: TextStyle(color: Color(0xff2F2E41), fontWeight: FontWeight.bold, fontSize: 15),
                         ),
                       ),
                       Container(
@@ -241,8 +241,8 @@ class _AvailableCarsScreenState extends State<AvailableCarsScreen> {
               height: 30,
             ),
             Container(
-              width: w * 0.85,
-              height: h * 0.15,
+              // width: w * 0.85,
+              // height: h * 0.15,
               margin: const EdgeInsets.only(left: 20, right: 20),
               decoration: BoxDecoration(
                   color: const Color(0xffFFF9EE),
@@ -256,43 +256,43 @@ class _AvailableCarsScreenState extends State<AvailableCarsScreen> {
                   ]),
               child: Row(
                 children: [
-                  Column(
-                    children: [
-                      Transform.scale(
-                        scale: 1.2,
-                        child: Container(
-                            padding: const EdgeInsets.only(left: 20),
-                            // color: const Color(0xFFE8581C),
-                            child: Image.asset(
-                              "assets/images/jeep.png",
-                            )),
-                      ),
-                      // Container(
-                      //
-                      //   child: Image.asset("assets/images/toyota.png",
-                      //
-                      //     width: w*0.3,
-                      //     height: h*0.095,),
-                      // ),
-                      const SizedBox(
-                        height: 25,
-                      ),
-                      Container(
-                          margin: const EdgeInsets.only(left: 20),
-                          child: RichText(
-                            text: TextSpan(
-                                text: "70,000FCA",
-                                style: const TextStyle(fontSize: 15, color: Color(0xff2F2E41)),
-                                children: [
-                                  TextSpan(
-                                    text: "/JOUR",
-                                    style:
-                                        TextStyle(fontSize: 15, color: Colors.grey[500], fontWeight: FontWeight.bold),
-                                  ),
-                                ]),
-                          ))
-                    ],
-                  ),
+                 Expanded(child:  Column(
+                   children: [
+                     Transform.scale(
+                       scale: 1.2,
+                       child: Container(
+                           padding: const EdgeInsets.only(left: 20),
+                           // color: const Color(0xFFE8581C),
+                           child: Image.asset(
+                             "assets/images/jeep.png",
+                           )),
+                     ),
+                     // Container(
+                     //
+                     //   child: Image.asset("assets/images/toyota.png",
+                     //
+                     //     width: w*0.3,
+                     //     height: h*0.095,),
+                     // ),
+                     const SizedBox(
+                       height: 25,
+                     ),
+                     Container(
+                         margin: const EdgeInsets.only(left: 20),
+                         child: RichText(
+                           text: TextSpan(
+                               text: "70,000FCA",
+                               style: const TextStyle(fontSize: 15, color: Color(0xff2F2E41)),
+                               children: [
+                                 TextSpan(
+                                   text: "/JOUR",
+                                   style:
+                                   TextStyle(fontSize: 15, color: Colors.grey[500], fontWeight: FontWeight.bold),
+                                 ),
+                               ]),
+                         ))
+                   ],
+                 ),),
                   Column(
                     children: [
                       Container(
@@ -301,7 +301,7 @@ class _AvailableCarsScreenState extends State<AvailableCarsScreen> {
                         child: const Text(
                           "NISSAN PATHFINDER",
                           textAlign: TextAlign.right,
-                          style: TextStyle(color: Color(0xff2F2E41), fontWeight: FontWeight.bold, fontSize: 18),
+                          style: TextStyle(color: Color(0xff2F2E41), fontWeight: FontWeight.bold, fontSize: 15),
                         ),
                       ),
                       Container(
@@ -320,7 +320,7 @@ class _AvailableCarsScreenState extends State<AvailableCarsScreen> {
                         child:  Container(
 
                           alignment: Alignment.bottomRight,
-                          margin: const EdgeInsets.only(top: 26, left: 52),
+                          margin: const EdgeInsets.only(top: 26, left: 55),
                           height: h * 0.05,
                           width: w * 0.35,
                           decoration: BoxDecoration(
@@ -345,8 +345,8 @@ class _AvailableCarsScreenState extends State<AvailableCarsScreen> {
               height: 30,
             ),
             Container(
-              width: w * 0.85,
-              height: h * 0.15,
+              // width: w * 0.85,
+              // height: h * 0.15,
               margin: const EdgeInsets.only(left: 20, right: 20),
               decoration: BoxDecoration(
                   color: const Color(0xffFFF9EE),
@@ -360,41 +360,41 @@ class _AvailableCarsScreenState extends State<AvailableCarsScreen> {
                   ]),
               child: Row(
                 children: [
-                  Column(
-                    children: [
-                      Transform.scale(
-                        scale: 1.2,
-                        child: Container(
-                            padding: const EdgeInsets.only(left: 20),
-                            // color: const Color(0xFFE8581C),
-                            child: Image.asset("assets/images/hilux.png")),
-                      ),
-                      // Container(
-                      //
-                      //   child: Image.asset("assets/images/toyota.png",
-                      //
-                      //     width: w*0.3,
-                      //     height: h*0.095,),
-                      // ),
-                      const SizedBox(
-                        height: 25,
-                      ),
-                      Container(
-                          margin: const EdgeInsets.only(left: 20),
-                          child: RichText(
-                            text: TextSpan(
-                                text: "70,000FCA",
-                                style: const TextStyle(fontSize: 15, color: Color(0xff2F2E41)),
-                                children: [
-                                  TextSpan(
-                                    text: "/JOUR",
-                                    style:
-                                        TextStyle(fontSize: 15, color: Colors.grey[500], fontWeight: FontWeight.bold),
-                                  ),
-                                ]),
-                          ))
-                    ],
-                  ),
+               Expanded(child:    Column(
+                 children: [
+                   Transform.scale(
+                     scale: 1.2,
+                     child: Container(
+                         padding: const EdgeInsets.only(left: 20),
+                         // color: const Color(0xFFE8581C),
+                         child: Image.asset("assets/images/hilux.png")),
+                   ),
+                   // Container(
+                   //
+                   //   child: Image.asset("assets/images/toyota.png",
+                   //
+                   //     width: w*0.3,
+                   //     height: h*0.095,),
+                   // ),
+                   const SizedBox(
+                     height: 25,
+                   ),
+                   Container(
+                       margin: const EdgeInsets.only(left: 20),
+                       child: RichText(
+                         text: TextSpan(
+                             text: "70,000FCA",
+                             style: const TextStyle(fontSize: 15, color: Color(0xff2F2E41)),
+                             children: [
+                               TextSpan(
+                                 text: "/JOUR",
+                                 style:
+                                 TextStyle(fontSize: 15, color: Colors.grey[500], fontWeight: FontWeight.bold),
+                               ),
+                             ]),
+                       ))
+                 ],
+               ),),
                   Column(
                     children: [
                       Container(
@@ -403,7 +403,7 @@ class _AvailableCarsScreenState extends State<AvailableCarsScreen> {
                         child: const Text(
                           "TOYOTA HILUX",
                           textAlign: TextAlign.right,
-                          style: TextStyle(color: Color(0xff2F2E41), fontWeight: FontWeight.bold, fontSize: 18),
+                          style: TextStyle(color: Color(0xff2F2E41), fontWeight: FontWeight.bold, fontSize: 15),
                         ),
                       ),
                       Container(
@@ -447,8 +447,8 @@ class _AvailableCarsScreenState extends State<AvailableCarsScreen> {
               height: 30,
             ),
             Container(
-              width: w * 0.85,
-              height: h * 0.15,
+              // width: w * 0.85,
+              // height: h * 0.15,
               margin: const EdgeInsets.only(left: 20, right: 20),
               decoration: BoxDecoration(
                   color: const Color(0xffFFF9EE),
@@ -462,41 +462,41 @@ class _AvailableCarsScreenState extends State<AvailableCarsScreen> {
                   ]),
               child: Row(
                 children: [
-                  Column(
-                    children: [
-                      Transform.scale(
-                        scale: 1.2,
-                        child: Container(
-                            padding: const EdgeInsets.only(left: 20),
-                            // color: const Color(0xFFE8581C),
-                            child: Image.asset("assets/images/toyota.png")),
-                      ),
-                      // Container(
-                      //
-                      //   child: Image.asset("assets/images/toyota.png",
-                      //
-                      //     width: w*0.3,
-                      //     height: h*0.095,),
-                      // ),
-                      const SizedBox(
-                        height: 25,
-                      ),
-                      Container(
-                          margin: const EdgeInsets.only(left: 20),
-                          child: RichText(
-                            text: TextSpan(
-                                text: "100,000FCA",
-                                style: const TextStyle(fontSize: 15, color: Color(0xff2F2E41)),
-                                children: [
-                                  TextSpan(
-                                    text: "/JOUR",
-                                    style:
-                                        TextStyle(fontSize: 15, color: Colors.grey[500], fontWeight: FontWeight.bold),
-                                  ),
-                                ]),
-                          ))
-                    ],
-                  ),
+                 Expanded(child:  Column(
+                   children: [
+                     Transform.scale(
+                       scale: 1.2,
+                       child: Container(
+                           padding: const EdgeInsets.only(left: 20),
+                           // color: const Color(0xFFE8581C),
+                           child: Image.asset("assets/images/toyota.png")),
+                     ),
+                     // Container(
+                     //
+                     //   child: Image.asset("assets/images/toyota.png",
+                     //
+                     //     width: w*0.3,
+                     //     height: h*0.095,),
+                     // ),
+                     const SizedBox(
+                       height: 25,
+                     ),
+                     Container(
+                         margin: const EdgeInsets.only(left: 20),
+                         child: RichText(
+                           text: TextSpan(
+                               text: "100,000FCA",
+                               style: const TextStyle(fontSize: 15, color: Color(0xff2F2E41)),
+                               children: [
+                                 TextSpan(
+                                   text: "/JOUR",
+                                   style:
+                                   TextStyle(fontSize: 15, color: Colors.grey[500], fontWeight: FontWeight.bold),
+                                 ),
+                               ]),
+                         ))
+                   ],
+                 ),),
                   Column(
                     children: [
                       Container(
@@ -505,7 +505,7 @@ class _AvailableCarsScreenState extends State<AvailableCarsScreen> {
                         child: const Text(
                           "TOYOTA VITZ",
                           textAlign: TextAlign.right,
-                          style: TextStyle(color: Color(0xff2F2E41), fontWeight: FontWeight.bold, fontSize: 18),
+                          style: TextStyle(color: Color(0xff2F2E41), fontWeight: FontWeight.bold, fontSize: 15),
                         ),
                       ),
                       Container(

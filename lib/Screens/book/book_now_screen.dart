@@ -12,6 +12,8 @@ class BookNowScreen extends StatefulWidget {
 }
 
 class _BookNowScreenState extends State<BookNowScreen> {
+
+   String topic ="packages";
   // Initial Selected Value
   String dropdownvalue = 'Comment vous vouler payer';
 
@@ -147,7 +149,7 @@ class _BookNowScreenState extends State<BookNowScreen> {
           ]),
           child: TextField(
             decoration: InputDecoration(
-                hintText: "Mesedez",
+                // hintText: "Mesedez"+topic,
                 prefixIcon: const Icon(
                   Icons.car_rental,
                   color: Color(0xffCEA110),
@@ -156,7 +158,8 @@ class _BookNowScreenState extends State<BookNowScreen> {
                     borderRadius: BorderRadius.circular(30), borderSide: const BorderSide(color: Colors.white)),
                 enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(30), borderSide: const BorderSide(color: Colors.white)),
-                border: OutlineInputBorder(borderRadius: BorderRadius.circular(30))),
+                border: OutlineInputBorder(borderRadius: BorderRadius.circular(30)))
+
           ),
         ),
         Row(
